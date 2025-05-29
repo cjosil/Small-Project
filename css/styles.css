@@ -1,140 +1,206 @@
-body 
-{
-    background-color: #707070;
-}
-
-#title 
-{
-    font-size: 40px;
+/* === PAGE LAYOUT === */
+.HOME-PAGE {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     width: 100%;
-    margin: 2% 5%;
+  }
+  
+  .HOME-PAGE .div {
+    background-color: #ffffff;
+    width: 1440px;
+    height: 1024px;
+    position: relative;
+  }
+  
+  /* === LOGO SECTION === */
+  .aqua-link {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    position: absolute;
+    top: 50px;
+    left: 80px;
+  }
+  
+  .ellipse {
+    width: 82.3px;
+    height: 82.3px;
+    background-color: #d9d9d9;
+    border-radius: 50%;
+  }
+  
+  .logo-text {
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+    margin: 0;
+    line-height: 1;
+  }
+  
+  .logo-text .text-wrapper {
+    font-family: 'Nixie One', sans-serif;
+    font-size: 3.8rem;
+    font-weight: 400;
+    color: #163440;
+  }
+  
+  .logo-text .span {
+    font-family: 'Send Flowers', cursive;
+    font-size: 4.5rem;
+    color: #427f8c;
+  }
+  
+  /* === NAVIGATION LINKS === */
+  .HOME-PAGE .frame {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    position: absolute;
+    top: 50px;
+    right: 80px;
+  }
+  
+  /* Shared styles: ABOUT, LOG IN, SIGN UP */
+  .text-pop-up .MY-TEXT,
+  .text-pop-up,
+  .component-SU {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 1.05rem;
+    text-transform: uppercase;
+    color: #163440;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 44px;
+    line-height: 1;
+    text-decoration: none;
+  }
+  
+  /* SIGN UP button specific appearance */
+  .component-SU {
+    padding: 0.5rem 1.2rem;
+    background-color: #163440;
+    color: white;
+    border: none;
+    border-radius: 999px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+  }
+  
+  .component-SU:hover {
+    background-color: #1e4558;
+  }
+  
+  /* Optional: hover for text links */
+  .text-pop-up:hover .MY-TEXT {
+    text-decoration: underline;
+    color: #1e4558;
+  }
+
+  /* === Modal Overlay === */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  
+  /* === Sign-Up Modal Box (already styled, but keep here for centrality) */
+  .signup-modal {
+    width: 400px;
+    padding: 40px;
+    border: 1px solid #427f8c;
+    border-radius: 12px;
+    background-color: white;
     text-align: center;
-    font-family: 'Ubuntu', sans-serif;
-    color: #FFFFFF;
-}
+    font-family: 'Inter', sans-serif;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
 
-#loginDiv
-{
-    font-size: 30px;
-    width: 70%;
-    margin-left: 15%;
-    padding: 25px;
-    background-color: #b2b2b2;
-}
-
-#loggedInDiv
-{
-    font-size: 30px;
-    width: 70%;
-    margin-left: 15%;
-    padding: 25px;
-    background-color: #b2b2b2;
-}
-
-#accessUIDiv
-{
-    font-size: 30px;
-    width: 70%;
-    margin-left: 15%;
-    padding: 25px;
-    background-color: #b2b2b2;
-}
-
-.buttons
-{
-    font-size: 30px;
-    border-radius: 25px;
-    width: 50%;
-    margin-left: 25%;
-    font-family: 'Ubuntu', sans-serif;
-}
-
-.buttons:hover{
-    background-color: #00d5124f;
-    color: #FFFFFF;
-    opacity: 50%;
-}
-
-#loginName
-{
-	font-size: 30px;
-}
-#loginPassword
-{
-	font-size: 30px;
-}
-#searchText
-{
-	font-size: 30px;
-}
-#colorText
-{
-	font-size: 30px;
-}
-
-input[type="text"],input[type="password"]{
-    border-radius: 25px;
+  
+  /* === LOGIN MODAL === */
+.login-modal {
+    width: 400px;
+    padding: 40px;
+    border: 1px solid #427f8c;
+    border-radius: 12px;
+    background-color: white;
+    margin: 100px auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Inter', sans-serif;
     text-align: center;
-    width: 80%;
-    margin-left: 10%;
-    margin-bottom: 2%;
-    font-family: 'Ubuntu', sans-serif;
-}
-
-#inner-title{
-    display: inline-block;
-    font-size: 0.8em;
-    width: 90%;
-    text-align: center;
-    margin-left: 5%;
-    margin-bottom: 2%;
-    font-family: 'Ubuntu', sans-serif;
-    color: #95060a;
-}
-
-#loginResult{
-    display: inline-block;
-    font-size: 0.8em;
-    width: 90%;
-    text-align: center;
-    margin-left: 5%;
-    margin-bottom: 2%;
-    font-family: 'Ubuntu', sans-serif;
-    color: #95060a;
-}
-
-#userName{
-    display: inline-block;
-    width: 80%;
-    margin-left: 10%;
-    text-align: center;
-}
-
-#logoutButton{
-    width: 20%;
-    margin-left: 40%;
-}
-
-select{
-    width: 30%;
-    margin-left: 35%;
-    margin-top: 2%;
-    font-size: 0.75em;
-    font-family: 'Ubuntu', sans-serif;
-}
-
-#colorSearchResult{
-    display: none;
-}
-
-#colorAddResult{
-    display: inline-block;
-    font-size: 0.8em;
-    width: 90%;
-    text-align: center;
-    margin-left: 5%;
-    margin-top: 2%;
-    margin-bottom: 1%;
-    font-family: 'Ubuntu', sans-serif;
-    color: #95060a;
-}
+  }
+  
+  .login-modal h2 {
+    font-size: 2rem;
+    color: #163440;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+  
+  .login-modal form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .login-modal input[type="text"],
+  .login-modal input[type="password"] {
+    padding: 10px 15px;
+    font-size: 1rem;
+    border: 2px solid #427f8c;
+    border-radius: 999px;
+    outline: none;
+    transition: border-color 0.3s ease;
+  }
+  
+  .login-modal input:focus {
+    border-color: #1e4558;
+  }
+  
+  .submit-btn {
+    background-color: #163440;
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 999px;
+    padding: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .submit-btn:hover {
+    background-color: #1e4558;
+  }
+  
+  .error-message {
+    color: #cc4b4b;
+    font-size: 0.9rem;
+    margin-bottom: 12px;
+  }
+  
+  /* Modal Overlay */
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  

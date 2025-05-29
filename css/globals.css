@@ -1,0 +1,52 @@
+/* ✅ CSS Reset (Meyer Reset via CDN) */
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+
+/* ✅ Base Global Settings */
+* {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  background-color: #ffffff;
+  color: #222222;
+}
+
+/* ✅ Accessibility: Generic focus outline for buttons */
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid #4a90e2 !important;
+  outline-offset: 2px;
+}
+
+/* ✅ Base Link Behavior */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ✅ Utility Classes (optional, used globally) */
+.hidden {
+  display: none !important;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
