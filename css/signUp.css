@@ -1,61 +1,93 @@
 body 
 {
-    background-color: #707070;
+    background-color: #FFFFFF;
 }
 
 #title 
 {
-    font-size: 40px;
-    width: 100%;
-    margin: 2% 5%;
     text-align: center;
-    font-family: 'Ubuntu', sans-serif;
-    color: #FFFFFF;
+    font-size: 58px;
+    width: 258px;
+    height: 111px;
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: 0%;
+    margin: 2% auto;
+    vertical-align: middle;
+    font-family: 'Inter', Inter;
+    color: #163440;
 }
 
-#loginDiv
+.signUpDiv 
+{
+    margin: auto;
+    width: 450px;
+}
+
+.signUpDiv input[type="text"], input[type="password"]
+{
+    text-align: left;
+    
+    width: 324px;
+    height: 40px;
+    margin-left: 15%;
+    margin-bottom: 10px;
+
+    padding-top: -0.75px;
+    padding-left: 15px;
+
+
+    border-radius: 20px;
+    border-color: #163440;
+}
+
+/* #loggedInDiv
+{
+    font-size: 30px;
+    width: 324px;
+    height: 40px;
+    margin-left: 15%;
+    padding: 25px;
+    
+} */
+
+/* #accessUIDiv
 {
     font-size: 30px;
     width: 70%;
     margin-left: 15%;
     padding: 25px;
     background-color: #b2b2b2;
-}
-
-#loggedInDiv
-{
-    font-size: 30px;
-    width: 70%;
-    margin-left: 15%;
-    padding: 25px;
-    background-color: #b2b2b2;
-}
-
-#accessUIDiv
-{
-    font-size: 30px;
-    width: 70%;
-    margin-left: 15%;
-    padding: 25px;
-    background-color: #b2b2b2;
-}
+} */
 
 .buttons
 {
+    display: block;
+    margin: auto;
+
     font-size: 30px;
     border-radius: 25px;
-    width: 50%;
-    margin-left: 25%;
-    font-family: 'Ubuntu', sans-serif;
+    width: 177px;
+    height: 57px;
+    border-radius: 61px;
+    
+    padding-top: 9px;
+    padding-right: 26px;
+    padding-bottom: 9px;
+    padding-left: 26px;
+    
+    font-family: 'Inter', Inter;
+    color: white;
+    background-color: #163440;
 }
 
 .buttons:hover{
-    background-color: #00d5124f;
-    color: #FFFFFF;
+    background-color: #06183d4f;
+    color: #2586e1;
     opacity: 50%;
 }
 
-#loginName
+/* #loginName
 {
 	font-size: 30px;
 }
@@ -70,17 +102,17 @@ body
 #colorText
 {
 	font-size: 30px;
-}
+} */
 
-input[type="text"],input[type="password"]{
+/* input[type="text"],input[type="password"]{
     border-radius: 25px;
     text-align: center;
     width: 80%;
     margin-left: 10%;
     margin-bottom: 2%;
     font-family: 'Ubuntu', sans-serif;
-}
-
+} */
+/* 
 #inner-title{
     display: inline-block;
     font-size: 0.8em;
@@ -113,7 +145,7 @@ input[type="text"],input[type="password"]{
 #logoutButton{
     width: 20%;
     margin-left: 40%;
-}
+} */
 
 select{
     width: 30%;
@@ -123,7 +155,7 @@ select{
     font-family: 'Ubuntu', sans-serif;
 }
 
-#colorSearchResult{
+/* #colorSearchResult{
     display: none;
 }
 
@@ -137,4 +169,4 @@ select{
     margin-bottom: 1%;
     font-family: 'Ubuntu', sans-serif;
     color: #95060a;
-}
+} */
