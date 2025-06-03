@@ -13,12 +13,27 @@
 	} 
 	else
 	{
-		$stmt = $conn->prepare("INSERT into Users (FirstName,LastName,Login,Password) VALUES(?,?,?,?)");
-		$stmt->bind_param("ssss", $firstName,$lastName, $login, $password);
-		$stmt->execute();
-		$stmt->close();
-		$conn->close();
-		returnWithError("");
+		// Check for duplicate Username
+		$checkDuplicateUsername = $conn->prepare("Select Login from Users where Login=?");
+		$checkDuplicateUsername->bind_param("s", $login);
+		$checkDuplicateUsername->execute();
+		$result = $checkDuplicateUsername->get_result();
+		if ($result->num_rows > 0)
+		{
+			returnWithError("Username is already taken.");
+		}
+		$checkDuplicateUsername->close();
+
+		// Register new users
+		if($result->num_rows == 0)
+		{
+			$stmt = $conn->prepare("INSERT into Users (FirstName,LastName,Login,Password) VALUES(?,?,?,?)");
+			$stmt->bind_param("ssss", $firstName,$lastName, $login, $password);
+			$stmt->execute();
+			$stmt->close();
+			$conn->close();
+			returnWithError("");
+		}
 	}
 
 	function getRequestInfo()
